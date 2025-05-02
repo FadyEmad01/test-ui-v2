@@ -1,0 +1,36 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:component",
+      "dependencies": ["motion"],
+      "title": "Accordion",
+      "description": "A vertically stacked set of collapsible containers allowing users to toggle content visibility. Customize the animation effects with variants and transitions for expanding/collapsing the sections.",
+      "files": [
+        {
+          "path": "components/core/accordion.tsx",
+          "type": "registry:component",
+          "target": "app/components/core/accordion.tsx"
+        },
+        {
+          "path": "app/(docs)/docs/(docWarrap)/accordion/accordion-basic.tsx",
+          "type": "registry:component",
+          "target": "app/components/accordion/accordion.tsx"
+        },
+        {
+          "path": "app/(docs)/docs/(docWarrap)/accordion/accordion-icons.tsx",
+          "type": "registry:component",
+          "target": "app/components/accordion/accordion-item.tsx"
+        },
+        {
+          "path": "app/(docs)/docs/(docWarrap)/accordion/accordion-variant.tsx",
+          "type": "registry:component",
+          "target": "app/components/accordion/accordion-trigger.tsx"
+        }
+      ]
+    }
+  ]
+}
