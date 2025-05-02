@@ -4,12 +4,13 @@ import { Navbar } from '@/components/Navbar';
 import { absoluteUrl, cn, constructMetadata } from '@/lib/utils';
 import { fontMono, fontSans } from '@/lib/fonts';
 import { ThemeProvider } from 'next-themes';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = constructMetadata({
   title: 'Motion-Primitives',
   description:
     'UI kit to make beautiful, animated interfaces, faster. Open-source and customizable.',
-    image: absoluteUrl('/favicon.ico'),
+  image: absoluteUrl('/favicon.ico'),
 });
 
 export default function RootLayout({
@@ -29,6 +30,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='light'>
           <div className='isolate min-h-screen'>{children}</div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
