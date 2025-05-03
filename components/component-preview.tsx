@@ -23,7 +23,7 @@ export default function ComponentPreview({
   const [reTriggerKey, setReTriggerKey] = useState<number>(Date.now());
 
   const componentName = filePath?.split('/').pop()?.split('.').shift();
-  const registryUrl = `https://motion-primitives.com/e/${componentName}.json`;
+  const registryUrl = `https://test-ui-v2.vercel.app/r/${componentName}.json`;
 
   const reTrigger = () => {
     setReTriggerKey(Date.now());
