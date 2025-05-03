@@ -4,7 +4,9 @@
   "type": "registry:component",
   "title": "Squircle",
   "description": "A squircle is a shape intermediate between a square and a circle.",
-  "dependencies": [],
+  "dependencies": [
+    "lucide-react"
+  ],
   "files": [
     {
       "path": "components/core/squircle.tsx",

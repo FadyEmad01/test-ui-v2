@@ -36,6 +36,7 @@
       "name": "squircle",
       "type": "registry:component",
       "title": "Squircle",
+      "dependencies": ["lucide-react"],
       "description": "A squircle is a shape intermediate between a square and a circle.",
       "files": [
         {
