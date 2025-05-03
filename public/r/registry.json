@@ -31,6 +31,28 @@
           "target": "app/components/accordion/accordion-trigger.tsx"
         }
       ]
+    },
+    {
+      "name": "squircle",
+      "type": "registry:component",
+      "title": "Squircle",
+      "description": "A squircle is a shape intermediate between a square and a circle.",
+      "files": [
+        {
+          "path": "components/core/squircle.tsx",
+          "type": "registry:component",
+          "target": "app/components/core/squircle.tsx"
+        },        {
+          "path": "app/(docs)/docs/(docWarrap)/squircle/squircle-apple-icon.tsx",
+          "type": "registry:component",
+          "target": "app/components/squircle/squircle-apple-icon.tsx"
+        },
+        {
+          "path": "app/(docs)/docs/(docWarrap)/squircle/hooks/useSquircle.ts",
+          "type": "registry:hook",
+          "target": "app/hooks/useSquircle.ts"
+        }
+      ]
     }
   ]
 }

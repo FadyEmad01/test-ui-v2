@@ -46,7 +46,7 @@ export function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProp
             key={index}
             href={item.href}
             className={cn(
-              "group relative flex h-8 w-full items-center justify-between rounded-lg px-2 font-normal text-foreground",
+              "group relative flex h-8 w-full items-center justify-between rounded-lg px-2 font-normal text-muted-foreground",
               "transition-transform duration-200 hover:translate-x-px hover:text-accent-foreground",
               pathname === item.href &&
                 "bg-accent font-medium text-accent-foreground",

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "squircle",
+  "type": "registry:component",
+  "title": "Squircle",
+  "description": "A squircle is a shape intermediate between a square and a circle.",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "components/core/squircle.tsx",
+      "content": "\"use client\";\r\n\r\nimport { useSquircle } from \"@/app/(docs)/docs/(docWarrap)/squircle/hooks/useSquircle\";\r\n\r\n\r\ninterface SquircleProps {\r\n  children: React.ReactNode;\r\n  radius?: string;\r\n  smooth?: string;\r\n  outline?: string;\r\n  className?: string;\r\n}\r\n\r\nexport default function Squircle({\r\n  children,\r\n  radius = \"40px\",\r\n  smooth = \"1\",\r\n  outline = \"none\",\r\n  className = \"\",\r\n}: Readonly<SquircleProps>) {\r\n\r\n  useSquircle();\r\n\r\n  const squircleStyle: React.CSSProperties = {\r\n    maskImage: \"paint(squircle)\",\r\n    WebkitMaskImage: \"paint(squircle)\",\r\n    borderRadius: radius,\r\n    // CSS custom properties (Houdini)\r\n    [\"--squircle-radius\" as any]: radius,\r\n    [\"--squircle-smooth\" as any]: smooth,\r\n    [\"--squircle-outline\" as any]: outline,\r\n  };\r\n\r\n  return (\r\n    <div className={`w-auto h-auto ${className}`} style={squircleStyle}>\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": "app/components/core/squircle.tsx"
+    },
+    {
+      "path": "app/(docs)/docs/(docWarrap)/squircle/squircle-apple-icon.tsx",
+      "content": "import React from 'react';\r\nimport { Music4 } from 'lucide-react';\r\nimport Squircle from '@/components/core/squircle';\r\n\r\nconst SquircleAppleIcon = () => {\r\n  return (\r\n    \r\n    // smooth value = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]\r\n\r\n    <Squircle radius='44px' smooth='0.9' outline='none'>\r\n      <div className='flex aspect-square w-[200px] items-center justify-center bg-linear-to-t from-[#FA233B] to-[#FB5C74]'>\r\n        <Music4 className='h-[100px] w-[100px] text-white' />\r\n      </div>\r\n    </Squircle>\r\n  );\r\n};\r\n\r\nexport default SquircleAppleIcon;\r\n",
+      "type": "registry:component",
+      "target": "app/components/squircle/squircle-apple-icon.tsx"
+    },
+    {
+      "path": "app/(docs)/docs/(docWarrap)/squircle/hooks/useSquircle.ts",
+      "content": "'use client';\r\n\r\nimport { useEffect } from 'react';\r\n\r\n\r\nexport function useSquircle() {\r\n  useEffect(() => {\r\n    if (typeof window !== \"undefined\" && \"paintWorklet\" in CSS) {\r\n      // TypeScript-safe cast\r\n      (CSS as unknown as { paintWorklet: Worklet }).paintWorklet.addModule(\r\n        \"https://unpkg.com/css-houdini-squircle@0.3.0/lib/squircle.js\"\r\n      );\r\n    }\r\n  }, []);\r\n}\r\n",
+      "type": "registry:hook",
+      "target": "app/hooks/useSquircle.ts"
+    },
+    {
+      "path": "components\\core\\squircle.tsx",
+      "content": "\"use client\";\r\n\r\nimport { useSquircle } from \"@/app/(docs)/docs/(docWarrap)/squircle/hooks/useSquircle\";\r\n\r\n\r\ninterface SquircleProps {\r\n  children: React.ReactNode;\r\n  radius?: string;\r\n  smooth?: string;\r\n  outline?: string;\r\n  className?: string;\r\n}\r\n\r\nexport default function Squircle({\r\n  children,\r\n  radius = \"40px\",\r\n  smooth = \"1\",\r\n  outline = \"none\",\r\n  className = \"\",\r\n}: Readonly<SquircleProps>) {\r\n\r\n  useSquircle();\r\n\r\n  const squircleStyle: React.CSSProperties = {\r\n    maskImage: \"paint(squircle)\",\r\n    WebkitMaskImage: \"paint(squircle)\",\r\n    borderRadius: radius,\r\n    // CSS custom properties (Houdini)\r\n    [\"--squircle-radius\" as any]: radius,\r\n    [\"--squircle-smooth\" as any]: smooth,\r\n    [\"--squircle-outline\" as any]: outline,\r\n  };\r\n\r\n  return (\r\n    <div className={`w-auto h-auto ${className}`} style={squircleStyle}>\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n",
+      "type": "registry:component",
+      "target": ""
+    },
+    {
+      "path": "app\\(docs)\\docs\\(docWarrap)\\squircle\\hooks\\useSquircle.ts",
+      "content": "'use client';\r\n\r\nimport { useEffect } from 'react';\r\n\r\n\r\nexport function useSquircle() {\r\n  useEffect(() => {\r\n    if (typeof window !== \"undefined\" && \"paintWorklet\" in CSS) {\r\n      // TypeScript-safe cast\r\n      (CSS as unknown as { paintWorklet: Worklet }).paintWorklet.addModule(\r\n        \"https://unpkg.com/css-houdini-squircle@0.3.0/lib/squircle.js\"\r\n      );\r\n    }\r\n  }, []);\r\n}\r\n",
+      "type": "registry:hook",
+      "target": ""
+    }
+  ]
+}
