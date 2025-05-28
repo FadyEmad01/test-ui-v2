@@ -5,8 +5,6 @@ import { OpenInV0Button } from './open-in-v0';
 import { cloneElement, useState } from 'react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 
-
-
 type ComponentPreviewProps = {
   component: React.ReactElement;
   hasReTrigger?: boolean;
@@ -32,9 +30,10 @@ export default function ComponentPreview({
   return (
     <div
       className={cn(
-        'group flex min-h-[350px] w-full items-center justify-center rounded-md',
+        'group flex min-h-[350px] w-full items-center justify-center rounded-md component-cursor',
         className
       )}
+      
     >
       <div className='absolute top-3 right-4'>
         <div className='flex items-center gap-3 opacity-0 transition-opacity group-hover:opacity-100'>

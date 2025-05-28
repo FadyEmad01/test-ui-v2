@@ -217,3 +217,9 @@
 }
 
 
+.component-cursor {
+  cursor: url('/images/cursor.svg'), auto;
+}
+.cursor-pointer {
+  cursor: url('/images/grab.svg'), auto;
+}

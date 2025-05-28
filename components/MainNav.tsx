@@ -70,7 +70,7 @@ export function MainNav() {
         <div>hello</div>
         <Badge
           variant='outline'
-          className='border-violet-500 bg-violet-100/50 leading-normal text-violet-500 dark:bg-violet-950/50'
+          className='leading-normal border bg-violet-100 text-violet-700 border-violet-200 dark:text-violet-600 dark:bg-violet-950/50 dark:border-violet-950'
         >
           Soon
         </Badge>

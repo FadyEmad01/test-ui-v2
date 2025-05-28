@@ -56,8 +56,6 @@ export const NAVIGATION: NavigationGroup[] = [
       {
         name: 'Accordion',
         href: '/docs/accordion',
-        isUpdated: true,
-        isPaid: true,
         goTo: [
           {
             prevHref: '/docs/installation',
@@ -82,6 +80,38 @@ export const NAVIGATION: NavigationGroup[] = [
             prevHref: '/docs/accordion',
             prevName: 'Accordion',
             iamIn: 'Squircle',
+            nextHref: '/docs/drawSVGscribbles',
+            nextName: 'DrawSVG Scribbles',
+          }
+        ]
+      },
+      {
+        name: 'DrawSVG Scribbles',
+        href: '/docs/drawSVGscribbles',
+        isNew: true,
+        goTo: [
+          {
+            prevHref: '/docs/squircle',
+            prevName: 'Squircle',
+            iamIn: 'Squircle',
+          }
+        ]
+      },
+
+    ],
+  },
+  {
+    name: 'Designed Components',
+    children: [
+      {
+        name: 'Neumorphism Button',
+        href: '/docs/neumorphism-button',
+        isNew: true,
+        goTo: [
+          {
+            prevHref: '/docs/squircle',
+            prevName: 'Squircle',
+            iamIn: 'Neumorphism Button',
           }
         ]
       },

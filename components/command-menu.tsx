@@ -95,7 +95,7 @@ export function CommandMenu({ ...props }: DialogProps) {
                         router.push(navItem.href);
                       }
                     }}
-                    className='flex items-center justify-between cursor-pointer'
+                    className='flex cursor-pointer items-center justify-between'
                   >
                     <div className='flex items-center'>
                       {useCircleIcon ? (
@@ -107,12 +107,14 @@ export function CommandMenu({ ...props }: DialogProps) {
                       )}
                       {navItem.name}
                     </div>
-                    {/* Show Badge based on navItem status */}
-                    {navItem.isNew && <BadgeStatus variant='new' />}
-                    {navItem.isUpdated && <BadgeStatus variant='updated' />}
-                    {navItem.isComingSoon && (
-                      <BadgeStatus variant='comingsoon' />
-                    )}
+                    <div className='flex items-center gap-2'>
+                      {/* Show Badge based on navItem status */}
+                      {navItem.isNew && <BadgeStatus variant='new' />}
+                      {navItem.isUpdated && <BadgeStatus variant='updated' />}
+                      {navItem.isComingSoon && (
+                        <BadgeStatus variant='comingsoon' />
+                      )}
+                    </div>
                   </CommandItem>
                 );
               })}
