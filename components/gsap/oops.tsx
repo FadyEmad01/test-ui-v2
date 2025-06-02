@@ -257,6 +257,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
+import Image from 'next/image';
 
 gsap.registerPlugin(InertiaPlugin);
 
@@ -305,7 +306,7 @@ export default function Oops() {
     ],
   };
 
-   // Function to get random image for a letter
+  // Function to get random image for a letter
   const getRandomImage = (letter: keyof typeof letterVariants) => {
     const variants = letterVariants[letter]
     const randomIndex = Math.floor(Math.random() * variants.length)
@@ -410,10 +411,13 @@ export default function Oops() {
       <div className='grid grid-cols-5 gap-[1vw] max-md:gap-[2vw]'>
         {images.map((img, i) => (
           <div key={i} className='media'>
-            <img
+            <Image
+              placeholder='empty'
+              width={128}
+              height={128}
               src={img.src}
               alt={img.alt}
-              className='pointer-events-none block size-32 rounded-2xl object-contain will-change-transform'
+              className='pointer-events-none block size-32 object-contain will-change-transform'
             />
           </div>
         ))}
@@ -421,3 +425,4 @@ export default function Oops() {
     </div>
   );
 }
+
